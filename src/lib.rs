@@ -25,6 +25,8 @@ pub mod bench_postcard;
 pub mod bench_postcard_all_varints;
 #[cfg(feature = "postcard-rework-flavors")]
 pub mod bench_postcard_rework_flavors;
+#[cfg(feature = "postcard-vint64")]
+pub mod bench_postcard_vint64;
 
 #[cfg(feature = "prost")]
 pub mod bench_prost;

@@ -4,3 +4,6 @@
 [submodule "postcards/rework-flavors"]
 	path = postcards/rework-flavors
 	url = https://github.com/jamesmunns/postcard.git
+[submodule "postcards/vint64"]
+	path = postcards/vint64
+	url = https://github.com/jamesmunns/postcard.git

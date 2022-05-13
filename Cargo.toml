@@ -54,6 +54,12 @@ path = "postcards/rework-flavors"
 features = ["alloc"]
 optional = true
 
+[dependencies.postcard-vint64]
+package = "postcardv64"
+path = "postcards/vint64"
+features = ["alloc"]
+optional = true
+
 [features]
 default = [
     "abomonation",
@@ -89,6 +95,7 @@ just-postcard = [
     # Postcard flavors
     "postcard-all-varints",
     "postcard-rework-flavors",
+    "postcard-vint64",
 ]
 
 [dev-dependencies]
