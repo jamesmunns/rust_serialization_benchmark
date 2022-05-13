@@ -22,8 +22,13 @@ use rust_serialization_benchmark::bench_cbor;
 use rust_serialization_benchmark::bench_flatbuffers;
 #[cfg(feature = "nachricht-serde")]
 use rust_serialization_benchmark::bench_nachricht;
+
 #[cfg(feature = "postcard")]
 use rust_serialization_benchmark::bench_postcard;
+#[cfg(feature = "postcard-all-varints")]
+use rust_serialization_benchmark::bench_postcard_all_varints;
+
+
 #[cfg(feature = "prost")]
 use rust_serialization_benchmark::bench_prost;
 #[cfg(feature = "rkyv")]
@@ -125,8 +130,15 @@ fn bench_log(c: &mut Criterion) {
     #[cfg(feature = "nachricht-serde")]
     bench_nachricht::bench(BENCH, c, &data);
 
+    // ---------------------------------------------------------------
+
     #[cfg(feature = "postcard")]
     bench_postcard::bench(BENCH, c, &data);
+
+    #[cfg(feature = "postcard-all-varints")]
+    bench_postcard_all_varints::bench(BENCH, c, &data);
+
+    // ---------------------------------------------------------------
 
     #[cfg(feature = "prost")]
     bench_prost::bench(BENCH, c, &data);
@@ -270,8 +282,16 @@ fn bench_mesh(c: &mut Criterion) {
     #[cfg(feature = "nachricht-serde")]
     bench_nachricht::bench(BENCH, c, &data);
 
+    // ---------------------------------------------------------------
+
     #[cfg(feature = "postcard")]
     bench_postcard::bench(BENCH, c, &data);
+
+    #[cfg(feature = "postcard-all-varints")]
+    bench_postcard_all_varints::bench(BENCH, c, &data);
+
+    // ---------------------------------------------------------------
+
 
     #[cfg(feature = "prost")]
     bench_prost::bench(BENCH, c, &data);
@@ -403,8 +423,15 @@ fn bench_minecraft_savedata(c: &mut Criterion) {
     #[cfg(feature = "nachricht-serde")]
     bench_nachricht::bench(BENCH, c, &data);
 
+    // ---------------------------------------------------------------
+
     #[cfg(feature = "postcard")]
     bench_postcard::bench(BENCH, c, &data);
+
+    #[cfg(feature = "postcard-all-varints")]
+    bench_postcard_all_varints::bench(BENCH, c, &data);
+
+    // ---------------------------------------------------------------
 
     #[cfg(feature = "prost")]
     bench_prost::bench(BENCH, c, &data);

@@ -18,8 +18,12 @@ pub mod bench_cbor;
 pub mod bench_flatbuffers;
 #[cfg(feature = "nachricht-serde")]
 pub mod bench_nachricht;
+
 #[cfg(feature = "postcard")]
 pub mod bench_postcard;
+#[cfg(feature = "postcard-all-varints")]
+pub mod bench_postcard_all_varints;
+
 #[cfg(feature = "prost")]
 pub mod bench_prost;
 #[cfg(feature = "rkyv")]

@@ -1,0 +1,3 @@
+[submodule "postcards/all-varints"]
+	path = postcards/all-varints
+	url = https://github.com/jamesmunns/postcard.git

@@ -41,6 +41,13 @@ simd-json = { version = "0.4", optional = true }
 speedy = { version = "0.8", optional = true }
 zstd = "0.9"
 
+# Postcard experiments
+[dependencies.postcard-all-varints]
+package = "postcard"
+path = "postcards/all-varints"
+features = ["alloc"]
+optional = true
+
 [features]
 default = [
     "abomonation",
@@ -72,6 +79,9 @@ default = [
 just-postcard = [
     "postcard",
     "serde",
+
+    # Postcard flavors
+    "postcard-all-varints",
 ]
 
 [dev-dependencies]
