@@ -27,7 +27,8 @@ use rust_serialization_benchmark::bench_nachricht;
 use rust_serialization_benchmark::bench_postcard;
 #[cfg(feature = "postcard-all-varints")]
 use rust_serialization_benchmark::bench_postcard_all_varints;
-
+#[cfg(feature = "postcard-rework-flavors")]
+use rust_serialization_benchmark::bench_postcard_rework_flavors;
 
 #[cfg(feature = "prost")]
 use rust_serialization_benchmark::bench_prost;
@@ -137,6 +138,9 @@ fn bench_log(c: &mut Criterion) {
 
     #[cfg(feature = "postcard-all-varints")]
     bench_postcard_all_varints::bench(BENCH, c, &data);
+
+    #[cfg(feature = "postcard-rework-flavors")]
+    bench_postcard_rework_flavors::bench(BENCH, c, &data);
 
     // ---------------------------------------------------------------
 
@@ -290,6 +294,9 @@ fn bench_mesh(c: &mut Criterion) {
     #[cfg(feature = "postcard-all-varints")]
     bench_postcard_all_varints::bench(BENCH, c, &data);
 
+    #[cfg(feature = "postcard-rework-flavors")]
+    bench_postcard_rework_flavors::bench(BENCH, c, &data);
+
     // ---------------------------------------------------------------
 
 
@@ -430,6 +437,9 @@ fn bench_minecraft_savedata(c: &mut Criterion) {
 
     #[cfg(feature = "postcard-all-varints")]
     bench_postcard_all_varints::bench(BENCH, c, &data);
+
+    #[cfg(feature = "postcard-rework-flavors")]
+    bench_postcard_rework_flavors::bench(BENCH, c, &data);
 
     // ---------------------------------------------------------------
 

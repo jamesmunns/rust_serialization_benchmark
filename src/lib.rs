@@ -23,6 +23,8 @@ pub mod bench_nachricht;
 pub mod bench_postcard;
 #[cfg(feature = "postcard-all-varints")]
 pub mod bench_postcard_all_varints;
+#[cfg(feature = "postcard-rework-flavors")]
+pub mod bench_postcard_rework_flavors;
 
 #[cfg(feature = "prost")]
 pub mod bench_prost;

@@ -43,8 +43,14 @@ zstd = "0.9"
 
 # Postcard experiments
 [dependencies.postcard-all-varints]
-package = "postcard"
+package = "postcardav"
 path = "postcards/all-varints"
+features = ["alloc"]
+optional = true
+
+[dependencies.postcard-rework-flavors]
+package = "postcardrf"
+path = "postcards/rework-flavors"
 features = ["alloc"]
 optional = true
 
@@ -82,6 +88,7 @@ just-postcard = [
 
     # Postcard flavors
     "postcard-all-varints",
+    "postcard-rework-flavors",
 ]
 
 [dev-dependencies]
@@ -99,5 +106,6 @@ name = "bench"
 harness = false
 
 # Uncomment this to profile
-# [profile.bench]
+[profile.bench]
+# lto = true
 # debug = true
