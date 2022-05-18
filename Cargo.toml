@@ -89,11 +89,11 @@ default = [
 ]
 
 just-postcard = [
-    "postcard",
+    # "postcard",
     "serde",
 
     # Postcard flavors
-    "postcard-all-varints",
+    # "postcard-all-varints",
     "postcard-rework-flavors",
     "postcard-vint64",
 ]
